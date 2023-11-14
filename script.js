@@ -35,7 +35,20 @@ created() {
     console.log("L'APP è CREATA");
 },
 methods: {
-    
-}
+    showNext: function() {
+        if(this.activeIndex === this.slides.image.length - 1) {
+            this.activeIndex = 0;
+        } else {
+            this.activeIndex++;
+        }
+    },
+     showPrev: function() {
+        if(this.activeIndex === 0) {
+            this.activeIndex = this.slides.image.length - 1;
+        } else {
+            this.activeIndex--;
+        }
+     }
+  },
 
 }).mount("#app");
