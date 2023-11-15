@@ -38,10 +38,20 @@ data(){
 
 methods: {
     showNext: function() {
-       this.activeIndex++;
+       //this.activeIndex++;
+       if (this.active === 0){
+        this.activeIndex = this.slides.length -1;
+       }else{
+        this.activeIndex--;
+       }
     },
      showPrev: function() {
-       this.activeIndex--;
+       //this.activeIndex--;
+       if(this.activeIndex === this.slides.length -1){
+        this.activeIndex = 0;
+       }else{
+        this.activeIndex++;
+       }
      }
   }
 

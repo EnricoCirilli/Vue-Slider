@@ -31,10 +31,10 @@
                     <!-- Navigation -->
                     <div class="prev" @click="showPrev"></div>
                     <div class="next" @click="showNext"></div>
-                    <!-- Thumbs -->
+                    <!-- Thumbs  v-for è un el con tutta la sua struttura interns-->
                     <div class="thumb" v-for="(slide, index) in slides" :class="activeIndex == index ? 'active' : ''">
                         
-                       <img :src="slide.image" alt="Svezia"/>
+                       <img :src="slide.image" alt="slide.title"/>
                       
                     
                 </div>
